@@ -9,15 +9,14 @@ footer p {
   color: white;
   font-weight: bold;
   font-style: italic;
+  text-align: center;
 }
 #flexParent {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  align-content: center;
   color: white;
-  height: 300px;
+  min-height: 300px;
   line-height: 2;
   font-size: large;
 }
@@ -27,11 +26,6 @@ footer p {
   padding-top: 10px;
 }
 
-#centerWords {
-}
-
-#contactWords {
-}
 .phone {
   width: 30px;
   padding: 2px;
@@ -44,4 +38,9 @@ footer a {
 footer img {
   padding-top: 10px;
   width: 40px;
+}
+@media (max-width: 750px) {
+  div#flexParent {
+    flex-direction: column;
+  }
 }
