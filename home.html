@@ -26,11 +26,11 @@
       <div class="buttons">
         <i class="fa-solid fa-magnifying-glass"></i>
         <i class="fa-solid fa-cart-shopping"></i>
-        <button onclick="addForm()" type="submit">Sign in</button>
+        <button onclick="formToggle()" type="submit">Sign in</button>
       </div>
     </nav>
     <form id="form1" action="">
-      <span onclick="removeForm()">X</span>
+      <span onclick="formToggle()">X</span>
       <label for="email">Email: </label>
       <input id="email" type="email" />
       <label for="password">Password: </label>
@@ -45,10 +45,7 @@
   </body>
   <script>
     const form = document.querySelector("#form1");
-    function removeForm() {
-      form.classList.toggle("form");
-    }
-    function addForm() {
+    function formToggle() {
       form.classList.toggle("form");
     }
     form.addEventListener("submit", function (e) {
