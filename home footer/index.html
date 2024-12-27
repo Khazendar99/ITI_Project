@@ -15,15 +15,19 @@
     <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
-    <div class="main">
+    <div id="home" class="main">
       <nav>
         <h2>Dine <i class="fa-solid fa-utensils"></i> Divine</h2>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Menu</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <li>
+            <a class="active" id="homeLink" href="#home">Home</a>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+          <li>
+            <a id="contactLink" href="#contact">Contact</a>
+          </li>
         </ul>
         <div class="buttons">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -45,7 +49,7 @@
         <button>Reserve your tabble</button>
       </div>
     </div>
-    <footer>
+    <footer id="contact">
       <div id="flexParent">
         <!-- left -->
         <div id="leftWords">
@@ -91,6 +95,16 @@
     </footer>
     <script>
       const form = document.querySelector("#form1");
+      const links = document.querySelectorAll("li a");
+      links.forEach((el) =>
+        el.addEventListener("click", () => {
+          links.forEach((el) => {
+            el.classList.remove("active");
+          });
+          el.classList.add("active");
+        })
+      );
+
       function formToggle() {
         form.classList.toggle("form");
       }

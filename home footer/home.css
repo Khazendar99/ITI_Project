@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,19 +16,19 @@
   border-bottom: 10px solid black;
 }
 nav {
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: rgba(50, 50, 50, 0.9);
   width: 80%;
-  margin: 20px auto;
+  margin: 20px 10%;
   border-radius: 20px;
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.3rem;
-  /* min-width: 600px; */
+  position: fixed;
 }
 form {
-  position: absolute;
+  position: fixed;
   right: 100px;
   transition: 2s;
   visibility: hidden;
@@ -37,7 +40,6 @@ form {
   margin-top: 10px;
   padding: 15px;
   visibility: visible;
-
   background-color: black;
   padding: 10px;
   scale: 1;
@@ -100,11 +102,20 @@ nav ul {
 nav ul li {
   margin-left: 10px;
   cursor: pointer;
-  transition: 0.3s;
 }
-nav ul li:hover,
+nav ul li a {
+  transition: 0.3s;
+  color: white;
+  text-decoration: none;
+}
+nav ul li a:hover,
 .buttons i:hover {
   color: orange;
+  border-bottom: 2px solid orange;
+}
+a.active {
+  color: orangered;
+  border-bottom: 2px solid orangered;
 }
 .buttons button:hover,
 .paragraphs button:hover,
@@ -151,7 +162,7 @@ input[type="submit"] {
   transition: 0.3s;
 }
 @media (max-width: 800px) {
-  h1 {
+  .paragraphs h1 {
     font-size: 3rem;
     min-width: 280px;
   }
