@@ -108,10 +108,12 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+nav ul li a:hover {
+  border-bottom: 2px solid orange;
+}
 nav ul li a:hover,
 .buttons i:hover {
   color: orange;
-  border-bottom: 2px solid orange;
 }
 a.active {
   color: orangered;
